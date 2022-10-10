@@ -4,8 +4,11 @@ package com.example.cau1.service;
 import com.example.cau1.config.UserPrincipal;
 import com.example.cau1.entity.authEntity.Product;
 
-public interface ProductService {
-    Product createUser(Product product);
+import java.util.Collection;
 
-    UserPrincipal findByUsername(String username);
+public interface ProductService {
+    public abstract void createProduct(Product product);
+
+
+    Collection<Product> getProducts();
 }
